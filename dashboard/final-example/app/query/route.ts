@@ -1,6 +1,12 @@
 import postgres from 'postgres';
 
-const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
+// biome-ignore lint/style/noNonNullAssertion: <explanation>
+const sql = postgres(process.env.POSTGRES_URL!, {
+  ssl: 'require',
+  max: 1,
+  idle_timeout: 20,
+  connect_timeout: 10,
+});
 
 async function listInvoices() {
 	const data = await sql`

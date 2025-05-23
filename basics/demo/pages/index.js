@@ -3,6 +3,7 @@ import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
+// biome-ignore lint/suspicious/noShadowRestrictedNames: <explanation>
 import Date from '../components/date';
 
 export default function Home({ allPostsData }) {

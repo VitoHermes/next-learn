@@ -11,7 +11,8 @@ body {
     Ubuntu,
     Cantarell,
     Fira Sans,
-    Droid Sans,
+    /* biome-ignore lint/suspicious/noDuplicateFontNames: <explanation> */
+    Droid  Sans,
     Helvetica Neue,
     sans-serif;
   line-height: 1.6;
